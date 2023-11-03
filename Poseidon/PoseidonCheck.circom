@@ -16,10 +16,7 @@ template poseidon() {
   signal output out;
 
   component hash = Poseidon(4);
-  hash.inputs[0] <== a;
-  hash.inputs[1] <== b;
-  hash.inputs[2] <== c;
-  hash.inputs[3] <== d;
+  hash.inputs <== [a, b, c, d];
 
   hash.out === hashValue;
 }
