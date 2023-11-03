@@ -10,6 +10,9 @@ template poseidon() {
   signal input c;
   signal input d;
   
+  // expected hash
+  signal input hashValue;
+  
   signal output out;
 
   component hash = Poseidon(4);
@@ -18,9 +21,7 @@ template poseidon() {
   hash.inputs[2] <== c;
   hash.inputs[3] <== d;
 
-  log(hash.out);
-
-  out <== hash.out;
+  hash.out === hashValue;
 }
 
-component main = poseidon();
+component main {public [hashValue]} = poseidon();
