@@ -5,6 +5,10 @@ include "../node_modules/circomlib/circuits/poseidon.circom";
 // Input 4 variables,namely,'a','b','c','d' , and output variable 'out' .
 // Now , hash all the 4 inputs using poseidon and output it . 
 template poseidon() {
+  // We can write the code below in a very concise way like this
+  // signal input a, b, c, d;
+  // signal output out <== Poseidon(4)([a,b,c,d]);
+
   signal input a;
   signal input b;
   signal input c;
