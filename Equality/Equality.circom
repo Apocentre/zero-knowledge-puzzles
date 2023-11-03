@@ -19,7 +19,7 @@ template Equality() {
 
   // isEqual returns 1 when the values are equal. Which means that both equality checks must
   // be equal to 1 so all our inputs are equal.
-  isEq.out * isEq2.out === 1;
+  log(isEq.out * isEq2.out);
 
   out <== isEq.out * isEq2.out;
 }

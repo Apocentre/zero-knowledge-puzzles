@@ -2,7 +2,7 @@ pragma circom 2.1.6;
 
 include "../node_modules/circomlib/circuits/comparators.circom";
 
-// Input 3 values using 'a'(array of length 3) and check if they all are equal.
+// Input N values using 'a'(array of length N) and check if they all are equal.
 // Return using signal 'c'.
 template EqualityN(n) {
   signal input in[n];
@@ -21,7 +21,7 @@ template EqualityN(n) {
   isEq.in[0] <== 1;
   isEq.in[1] <== r;
 
-  isEq.out === 1;
+  log(isEq.out);
 
   out <== r;
 }
