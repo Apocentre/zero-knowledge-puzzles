@@ -5,3 +5,8 @@ cache/
 .DS_Store
 
 artifacts/
+
+**/*_js
+*.r1cs
+*.sym
+*.wtns
