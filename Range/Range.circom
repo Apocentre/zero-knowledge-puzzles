@@ -29,9 +29,14 @@ template Range() {
   log("Less Than", lt.out);
   log("Is in range", gt.out * lt.out);
 
+  // Add constraint to make sure a in in range.
   // GreaterThan return 1 if in[0] is greater (of smaller than in case of LessThan) than in[1].
   // If both are 1 then a is the provided range.
+  1 === gt.out * lt.out;
+
+  // we can optionally return. This will work only if a is in range. Otherwise witness generation will fail in the line above.
   out <== gt.out * lt.out;
+  
 }
 
 component main  = Range();
