@@ -1,4 +1,4 @@
-pragma circom 2.1.4;
+pragma circom 2.1.6;
 
 // Create a circuit which takes an input 'a',(array of length 2 ) , then  implement power modulo 
 // and return it using output 'c'.

@@ -1,4 +1,4 @@
-pragma circom 2.1.4;
+pragma circom 2.1.6;
 
 // In this exercise , we will learn how to check the range of a private variable and prove that 
 // it is within the range . 
