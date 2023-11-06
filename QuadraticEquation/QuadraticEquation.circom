@@ -1,4 +1,4 @@
-pragma circom 2.1.4;
+pragma circom 2.1.6;
 
 include "../node_modules/circomlib/circuits/comparators.circom";
 
@@ -13,7 +13,16 @@ template QuadraticEquation() {
     signal input res;   // Expected result of the equation
     signal output out;  // If res is correct , then return 1 , else 0 . 
 
-    // your code here
+    signal v0 <== x * x;
+    signal v1 <== a * v0;
+    signal total <== v1 + (b * x + c);
+
+    out <== IsEqual()([res, total]);
+    log(out);
+
+    // We can also do the following
+    // signal r <-- total == res ? 1 : 0;
+    // out <== r;
 }
 
 component main  = QuadraticEquation();
