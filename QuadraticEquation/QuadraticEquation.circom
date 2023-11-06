@@ -15,10 +15,9 @@ template QuadraticEquation() {
 
     signal v0 <== x * x;
     signal v1 <== a * v0;
-    signal v2 <== b * x + c;
-    signal v3 <== v1 + v2;
+    signal v2 <== v1 + (b * x + c);
 
-    signal r <-- v3 == res ? 1 : 0;
+    signal r <-- v2 == res ? 1 : 0;
 
     log(r);
     out <== r;
